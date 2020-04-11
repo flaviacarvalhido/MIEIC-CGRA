@@ -1,46 +1,44 @@
 /**
-* MyInterface
-* @constructor
-*/
+ * MyInterface
+ * @constructor
+ */
 class MyInterface extends CGFinterface {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    init(application) {
-        // call CGFinterface init
-        super.init(application);
-        // init GUI. For more information on the methods, check:
-        // http://workshop.chromeexperiments.com/examples/gui
-        this.gui = new dat.GUI();
-        
-        var obj = this;
+  init(application) {
+    // call CGFinterface init
+    super.init(application);
+    // init GUI. For more information on the methods, check:
+    // http://workshop.chromeexperiments.com/examples/gui
+    this.gui = new dat.GUI();
 
-        //Checkbox element in GUI
-        this.gui.add(this.scene, 'displayAxis').name('Display Axis');
+    var obj = this;
 
-        //Slider element in GUI
-        this.gui.add(this.scene, 'scaleFactor', 0.1, 5).name('Scale Factor');
+    //Checkbox element in GUI
+    this.gui.add(this.scene, "displayAxis").name("Display Axis");
 
+    //Slider element in GUI
+    this.gui.add(this.scene, "scaleFactor", 0.1, 5).name("Scale Factor");
 
-        //checkbox to control display of elements!!!!!!!!!!!!!
+    //checkbox to control display of elements!!!!!!!!!!!!!
 
-        //Checkbox element in GUI
-        this.gui.add(this.scene, 'displayDiamond').name('Display Diamond');
+    //Checkbox element in GUI
+    this.gui.add(this.scene, "displayDiamond").name("Display Diamond");
 
-        //Checkbox element in GUI
-        this.gui.add(this.scene, 'displayTriangle').name('Display Triangle');
+    //Checkbox element in GUI
+    this.gui.add(this.scene, "displayTriangle").name("Display Triangle");
 
-        //Checkbox element in GUI
-        this.gui.add(this.scene, 'displayParallelogram').name('Display Paral.');
+    //Checkbox element in GUI
+    this.gui.add(this.scene, "displayParallelogram").name("Display Paral.");
 
-        //Checkbox element in GUI
-        this.gui.add(this.scene, 'displayTriangleBig').name('Display Big T');
+    //Checkbox element in GUI
+    this.gui.add(this.scene, "displayTriangleBig").name("Display Big T");
 
-        //Checkbox element in GUI
-        this.gui.add(this.scene, 'displayTriangleSmall').name('Display Small T');
+    //Checkbox element in GUI
+    this.gui.add(this.scene, "displayTriangleSmall").name("Display Small T");
 
-        return true;
-    }
-    
+    return true;
+  }
 }
