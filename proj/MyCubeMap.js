@@ -156,4 +156,22 @@ class MyCubeMap extends CGFobject {
 
 
   }
+  updateTex() {
+    if (this.scene.selectedTexture == 0) {
+      this.newmatBack.loadTexture("images/split_cubemap/back.png");
+      this.newmatBottom.loadTexture("images/split_cubemap/bottom.png");
+      this.newmatFront.loadTexture("images/split_cubemap/front.png");
+      this.newmatLeft.loadTexture("images/split_cubemap/left.png");
+      this.newmatRight.loadTexture("images/split_cubemap/right.png");
+      this.newmatTop.loadTexture("images/split_cubemap/top.png");
+    }
+    if (this.scene.selectedTexture == 1) {
+      this.newmatBack.loadTexture("images/split_skybox/back.png");
+      this.newmatBottom.loadTexture("images/split_skybox/bottom.png");
+      this.newmatFront.loadTexture("images/split_skybox/front.png");
+      this.newmatLeft.loadTexture("images/split_skybox/left.png");
+      this.newmatRight.loadTexture("images/split_skybox/right.png");
+      this.newmatTop.loadTexture("images/split_skybox/top.png");
+    }
+  }
 }
