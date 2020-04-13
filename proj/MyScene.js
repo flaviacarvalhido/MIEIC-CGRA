@@ -35,8 +35,12 @@ class MyScene extends CGFscene {
     this.sphereMaterial.loadTexture("images/earth.jpg");
     this.sphereMaterial.setTextureWrap("Repeat", "Clamp to edge");
 
+    this.cubeMap = new MyCubeMap(this);
+
     //Objects connected to MyInterface
     this.displayAxis = true;
+    this.displaySphere = false;
+    this.displayMap = false;
   }
   initLights() {
     this.lights[0].setPosition(15, 2, 5, 1);
@@ -82,9 +86,14 @@ class MyScene extends CGFscene {
 
     // ---- BEGIN Primitive drawing section
 
-    this.sphereMaterial.apply();
-    this.sphere.display();
+    if (this.displaySphere) {
+      this.sphereMaterial.apply();
+      this.sphere.display();
+    }
 
+    if (this.displayMap) {
+      this.cubeMap.display();
+    }
     // ---- END Primitive drawing section
   }
 }
