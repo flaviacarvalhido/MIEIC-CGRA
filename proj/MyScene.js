@@ -37,10 +37,17 @@ class MyScene extends CGFscene {
 
     this.cubeMap = new MyCubeMap(this);
 
+
+    this.cylinder = new MyCylinder(this, 20);
+
+    this.vehicle = new MyVehicle(this, 4, 1);
+
     //Objects connected to MyInterface
     this.displayAxis = true;
     this.displaySphere = false;
     this.displayMap = false;
+    this.displayCylinder = false;
+    this.displayVehicle = false;
     this.selectedTexture = 0;
     this.textureIds = { 'Mountains': 0, 'Desert Mountains': 1 };
   }
@@ -91,6 +98,10 @@ class MyScene extends CGFscene {
 
     // ---- BEGIN Primitive drawing section
 
+    if (this.displayCylinder) {
+      this.cylinder.display();
+    }
+
     if (this.displaySphere) {
       this.sphereMaterial.apply();
       this.sphere.display();
@@ -99,6 +110,11 @@ class MyScene extends CGFscene {
     if (this.displayMap) {
       this.cubeMap.display();
     }
+
+    if (this.displayVehicle) {
+      this.vehicle.display();
+    }
+
     // ---- END Primitive drawing section
   }
 }
