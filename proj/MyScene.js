@@ -91,7 +91,7 @@ class MyScene extends CGFscene {
     if (this.gui.isKeyPressed("KeyW")) {
       text += " W ";
       keysPressed = true;
-      if (this.vehicle.vel == 0) {
+      if (this.vehicle.vel === 0) {
         this.vehicle.vel = 1;
       }
       this.vehicle.accelerate(this.speedFactor * this.vehicle.vel);

@@ -79,7 +79,7 @@ class MyVehicle extends CGFobject {
     }
 
     turn(val) {
-        this.angY = val;
+        this.angY += val;
     }
 
     accelerate(val) {
@@ -108,8 +108,8 @@ class MyVehicle extends CGFobject {
     }
 
     update() {
-        this.x += this.vel * Math.sin(this.angY * Math / 180);
-        this.z += this.vel * Math.cos(this.angY * Math / 180);
+        this.x += this.vel * Math.sin(this.angY * Math.PI / 180);
+        this.z += this.vel * Math.cos(this.angY * Math.PI / 180);
     }
 }
 
